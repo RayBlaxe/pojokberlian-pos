@@ -14,6 +14,7 @@ Route::prefix('pos')->group(function () {
 });
 
 // Item Management Routes
+
 Route::resource('items', ItemController::class);
 Route::get('/health', fn () => response('OK', 200));
 
