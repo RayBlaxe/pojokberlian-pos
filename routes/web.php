@@ -17,4 +17,5 @@ Route::prefix('pos')->group(function () {
 
 Route::resource('items', ItemController::class);
 Route::get('/health', fn () => response('OK', 200));
+Route::get('/health.html', fn () => response('OK', 200));
 
