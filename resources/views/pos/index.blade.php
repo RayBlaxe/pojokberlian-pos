@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Pojok Berlian - POS System')
+@section('title', 'Point of Sales - Pojok Berlian')
 
 @section('content')
 <div class="row">

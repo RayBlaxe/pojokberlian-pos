@@ -133,9 +133,9 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark pos-header">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="{{ route('pos.index') }}">
-                <i class="fas fa-cash-register me-2"></i>
-                POS System
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="{{ route('pos.index') }}">
+                <img src="{{ asset('favicon.svg') }}" alt="Pojok Berlian Logo" width="32" height="32" class="me-2">
+                Pojok Berlian - POS System
             </a>
             
             <div class="navbar-nav ms-auto">
