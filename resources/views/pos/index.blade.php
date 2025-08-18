@@ -75,15 +75,15 @@
                 <div class="border-top pt-3 mt-3">
                     <div class="d-flex justify-content-between mb-2">
                         <span>Subtotal:</span>
-                        <span id="subtotal">$0.00</span>
+                        <span id="subtotal">Rp0.00</span>
                     </div>
                     <div class="d-flex justify-content-between mb-2">
                         <span>Tax (10%):</span>
-                        <span id="tax">$0.00</span>
+                        <span id="tax">Rp0.00</span>
                     </div>
                     <div class="d-flex justify-content-between mb-3">
                         <strong>Total:</strong>
-                        <strong id="total">$0.00</strong>
+                        <strong id="total">Rp0.00</strong>
                     </div>
 
                     <!-- Payment Method -->
