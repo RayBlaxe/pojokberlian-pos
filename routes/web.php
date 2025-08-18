@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\POSController;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\BusinessSettingsController;
 
 Route::get('/', [POSController::class, 'index'])->name('pos.index');
 
@@ -14,8 +15,14 @@ Route::prefix('pos')->group(function () {
 });
 
 // Item Management Routes
-
 Route::resource('items', ItemController::class);
+
+// Business Settings Routes
+Route::prefix('settings')->group(function () {
+    Route::get('/edit', [BusinessSettingsController::class, 'edit'])->name('settings.edit');
+    Route::put('/update', [BusinessSettingsController::class, 'update'])->name('settings.update');
+});
+
 Route::get('/health', fn () => response('OK', 200));
 Route::get('/health.html', fn () => response('OK', 200));
 

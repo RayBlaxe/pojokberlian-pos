@@ -1,15 +1,27 @@
+@php
+    use Illuminate\Support\Facades\Storage;
+@endphp
+
 <div class="thermal-receipt">
+    @php
+        $settings = \App\Models\BusinessSetting::getSettings();
+    @endphp
+    
     <div class="center" style="margin-bottom: 10px;">
-        <img src="{{ asset('favicon.svg') }}" alt="Pojok Berlian Logo" width="40" height="40" style="display: block; margin: 0 auto;">
+        @if(str_starts_with($settings->logo_path, 'logos/'))
+            <img src="{{ Storage::url($settings->logo_path) }}" alt="Logo" width="40" height="40" style="display: block; margin: 0 auto;">
+        @else
+            <img src="{{ asset($settings->logo_path) }}" alt="Logo" width="40" height="40" style="display: block; margin: 0 auto;">
+        @endif
     </div>
     
     <div class="center bold">
-        Pojok Berlian Cafetaria
+        {{ $settings->business_name }}
     </div>
     <div class="center">
-        Jl. Berlian 14 No. 13<br>
-        Bekasi, Jawa Barat<br>
-        Telp: (+62) 851 5642 8744
+        {{ $settings->address }}<br>
+        {{ $settings->city }}<br>
+        Telp: {{ $settings->phone }}
     </div>
     
     <div class="dashed-line"></div>
@@ -66,8 +78,7 @@
     <div class="dashed-line"></div>
     
     <div class="center">
-        Thank you for your purchase!<br>
-        Please come again!
+        {!! nl2br(e($settings->footer_message)) !!}
     </div>
     
     <div class="center" style="margin-top: 10px;">

@@ -147,6 +147,10 @@
                     <i class="fas fa-box me-1"></i>
                     Items
                 </a>
+                <a class="nav-link" href="{{ route('settings.edit') }}">
+                    <i class="fas fa-cog me-1"></i>
+                    Settings
+                </a>
             </div>
         </div>
     </nav>
