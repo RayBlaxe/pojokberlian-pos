@@ -4,7 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'POS System')</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>@yield('title', 'Pojok Berlian - Point of Sales System')</title>
+    <meta name="description" content="@yield('description', 'Professional Point of Sales (POS) system for Pojok Berlian. Manage inventory, process sales, and print thermal receipts with ease.')">
+    <meta name="keywords" content="POS, Point of Sales, Inventory Management, Thermal Receipt, Sales System, Pojok Berlian">
+    <meta name="author" content="Pojok Berlian">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="@yield('title', 'Pojok Berlian - POS System')">
+    <meta property="og:description" content="@yield('description', 'Professional Point of Sales system for inventory and sales management')">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,7 +37,7 @@
         }
         
         .pos-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             color: white;
             padding: 1rem 0;
             margin-bottom: 2rem;
@@ -46,13 +64,13 @@
         }
         
         .btn-gradient {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #495057 0%, #6c757d 100%);
             border: none;
             color: white;
         }
         
         .btn-gradient:hover {
-            background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+            background: linear-gradient(135deg, #343a40 0%, #495057 100%);
             color: white;
         }
         
