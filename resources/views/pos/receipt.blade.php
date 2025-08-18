@@ -1,11 +1,15 @@
 <div class="thermal-receipt">
+    <div class="center" style="margin-bottom: 10px;">
+        <img src="{{ asset('favicon.svg') }}" alt="Pojok Berlian Logo" width="40" height="40" style="display: block; margin: 0 auto;">
+    </div>
+    
     <div class="center bold">
-        TOKO SERBA ADA
+        Pojok Berlian Cafetaria
     </div>
     <div class="center">
-        Jl. Raya Utama No. 123<br>
-        Jakarta Pusat, DKI Jakarta<br>
-        Telp: (021) 123-4567
+        Jl. Berlian 14 No. 13<br>
+        Bekasi, Jawa Barat<br>
+        Telp: (+62) 851 5642 8744
     </div>
     
     <div class="dashed-line"></div>
@@ -62,7 +66,7 @@
     <div class="dashed-line"></div>
     
     <div class="center">
-        Thank you for your business!<br>
+        Thank you for your purchase!<br>
         Please come again!
     </div>
     
